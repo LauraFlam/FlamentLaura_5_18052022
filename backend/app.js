@@ -7,6 +7,7 @@ const path = require('path');
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
+//mongoose.connect('mongodb+srv://Laura:Hzkum56@cluster0.mvs6y.mongodb.net/PROJET6-OPENCLASSROOMS?retryWrites=true&w=majority',//
 mongoose.connect('mongodb+srv://Laura:Hzkum56@cluster0.mvs6y.mongodb.net/?retryWrites=true&w=majority',
 { useNewUrlParser: true,
   useUnifiedTopology: true })
