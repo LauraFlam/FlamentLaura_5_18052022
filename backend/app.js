@@ -7,8 +7,8 @@ const path = require('path');
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
-//mongoose.connect('mongodb+srv://Laura:Hzkum56@cluster0.mvs6y.mongodb.net/PROJET6-OPENCLASSROOMS?retryWrites=true&w=majority',//
-mongoose.connect('mongodb+srv://Laura:Hzkum56@cluster0.mvs6y.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://Laura:Hzkum56@cluster0.mvs6y.mongodb.net/PROJET6-OPENCLASSROOMS?retryWrites=true&w=majority',
+//mongoose.connect('mongodb+srv://Laura:Hzkum56@cluster0.mvs6y.mongodb.net/?retryWrites=true&w=majority',//
 { useNewUrlParser: true,
   useUnifiedTopology: true })
 .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -25,15 +25,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors());
-/*
-app.use(function (req, res, next) {
-    //Enabling CORS
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-      next();
-    });
-*/
+
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use('/api/sauces', sauceRoutes);

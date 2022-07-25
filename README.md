@@ -1,4 +1,4 @@
-Lancez "npm install".
+Exécutez la commande "npm install" dans le terminal.
 
 Frontend :
 Entrez "ng serve" dans le dossier frontend pour lancer le frontend.
